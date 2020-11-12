@@ -1,0 +1,52 @@
+[submodule "gruvbox-gtk3"]
+    path = gruvbox-gtk/.config/gtk-3.0
+    url = https://github.com/bennetthardwick/gruvbox-gtk/tree/master/gtk-3.0
+
+[submodule "gruvbox-gtk2"]
+    path = gruvbox-gtk/.config/gtk-2.0
+    url = https://github.com/bennetthardwick/gruvbox-gtk/tree/master/gtk-2.0
+
+[submodule "gruvbox-theme"]
+    path = gruvbox-gtk/.themes/gruvbox
+    url = https://github.com/bennetthardwick/gruvbox-gtk
+
+[submodule "coc-nvim"]
+    path = nvim/.vim/plugged/coc.nvim
+    url = https://github.com/neoclide/coc.nvim
+
+[submodule "coc-python"]
+    path = nvim/.vim/plugged/coc-python
+    url = https://github.com/neoclide/coc-python
+
+[submodule "delimitMate"]
+    path = nvim/.vim/plugged/delimitMate
+    url = https://github.com/Raimondi/delimitMate
+
+[submodule "gentoo-syntax"]
+    path = nvim/.vim/plugged/gentoo-syntax
+    url = https://github.com/gentoo/gentoo-syntax
+
+[submodule "gruvbox-vim"]
+    path = nvim/.vim/plugged/gruvbox
+    url = https://github.com/morhetz/gruvbox
+
+[submodule "lightline-gruvbox"]
+    path = nvim/.vim/plugged/lightline-gruvbox.vim
+    url = https://github.com/shinchu/lightline-gruvbox.vim
+
+[submodule "lightline"]
+    path = nvim/.vim/plugged/lightline.vim
+    url = https://github.com/itchyny/lightline.vim
+
+[submodule "nerdtree"]
+    path = nvim/.vim/plugged/nerdtree
+    url = https://github.com/preservim/nerdtree
+
+[submodule "numbers"]
+    path = nvim/.vim/plugged/numbers.vim
+    url = https://github.com/myusuf3/numbers.vim
+
+[submodule "Omnisharp"]
+    path = nvim/.vim/plugged/omnisharp-vim
+    url = https://github.com/OmniSharp/omnisharp-vim
+
