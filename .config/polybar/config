@@ -13,7 +13,7 @@ background = #bb32302f
 foreground = #dfbf83
 modules-left = i3 mpd title
 modules-center = date
-modules-right = memory cpu volume wlan battery notifications
+modules-right = memory temp cpu volume wlan battery notifications
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -24,6 +24,12 @@ type = internal/memory
 internal = 1
 format = <label>
 label =   %mb_used%
+
+[module/temp]
+type = custom/script
+exec = sensors k10temp-pci-00c3 | grep "Tctl" | awk -F":" '{ gsub (/C|" "/, "", $0); print $2}' | cut -d "+" -f 2
+interval = 1
+label =  %output% 
 
 [module/cpu]
 type = internal/cpu
@@ -44,7 +50,7 @@ format-padding = 1
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ACAD
 poll-interval = 2
 format-discharging =  <label-discharging>%
@@ -57,7 +63,7 @@ time-format = %H:%M
 
 [module/wlan]
 type = internal/network
-interface = wlo1
+interface = wlp1s0
 interval = 5
 ;label-connected =  %essid% 
 label-connected =   

@@ -1,10 +1,10 @@
 #!/bin/bash
  
-killall -q polybar
+killall -q fullbar
 
 while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
-polybar example &
+polybar fullbar &
 
 echo "Polybar started..."
 

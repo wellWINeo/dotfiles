@@ -1,7 +1,7 @@
 ! fonts
 !URxvt.font:	-misc-fixed-medium-r-semicondensed-*-14-90-100-*-c-60-iso10646-1
 !URxvt.font:	xft:Dejavu Sans Mono:size=9
-URxvt.font: xft:IBM Plex Mono:size=10
+URxvt.font: xft:IBM Plex Mono:size=8
 Urxvt.letterSpace: -6
 
 ! scrollstyle 
@@ -62,3 +62,6 @@ URxvt.keysym.C-S-0x56: eval:paste_clipboard
 !polybar fonts
 polybar.font: DejaVu Sans; pixelsize=8;0
 polybar.glyphfont: FontAwesme: pixelsize=13;3
+
+! w3m
+URxvt.internalBorder: 0
