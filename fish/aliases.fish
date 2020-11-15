@@ -1,0 +1,1 @@
+abbr mkdir 'mkdir -p'

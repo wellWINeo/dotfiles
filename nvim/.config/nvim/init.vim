@@ -12,6 +12,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'shinchu/lightline-gruvbox.vim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'myusuf3/numbers.vim'
+    Plug 'tpope/vim-commentary'
 call plug#end()
 
 "Config section
@@ -19,8 +20,10 @@ syntax on
 colorscheme gruvbox
 set cursorline
 
+" Python commentary
+autocmd FileType python setlocal commentstring=#\ %s
 
-"" lightline settings
+" lightline settings
 " display lightline
 set laststatus=2
 set noshowmode
