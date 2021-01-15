@@ -2,7 +2,6 @@ call plug#begin("~/.vim/plugged")
 	" Plugin section
 	Plug 'morhetz/gruvbox'
 	Plug 'OmniSharp/omnisharp-vim'
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'neoclide/coc.nvim', {'branch':'release'}
 	Plug 'Raimondi/delimitMate'
@@ -13,6 +12,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'scrooloose/nerdtree'
 	Plug 'myusuf3/numbers.vim'
     Plug 'tpope/vim-commentary'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 "Config section
@@ -65,3 +65,6 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
+
+" GO
+let g:go_bin_path = $HOME."/go/bin"
