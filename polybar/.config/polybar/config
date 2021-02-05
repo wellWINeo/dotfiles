@@ -27,7 +27,8 @@ label =   %mb_used%
 
 [module/temp]
 type = custom/script
-exec = sensors k10temp-pci-00c3 | grep "Tctl" | awk -F":" '{ gsub (/C|" "/, "", $0); print $2}' | cut -d "+" -f 2
+exec = V=$(cat /sys/class/hwmon/hwmon3/temp1_input) && V=`echo "3k0 ${V/-/_} 1000/p"|dc` && echo ${V::-2}$'\xc2\xb0'
+;exec = sensors k10temp-pci-00c3 | grep "Tctl" | awk -F":" '{ gsub (/C|" "/, "", $0); print $2}' | cut -d "+" -f 2
 interval = 1
 label =  %output% 
 

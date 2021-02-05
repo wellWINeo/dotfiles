@@ -13,6 +13,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'myusuf3/numbers.vim'
     Plug 'tpope/vim-commentary'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'neoclide/coc-highlight'
 call plug#end()
 
 "Config section
@@ -68,3 +69,6 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " GO
 let g:go_bin_path = $HOME."/go/bin"
+
+" XAML
+autocmd BufNewFile,BufRead *.xaml set filetype=xml
