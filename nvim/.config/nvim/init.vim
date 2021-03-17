@@ -1,14 +1,13 @@
 call plug#begin("~/.vim/plugged")
 	" Plugin section
-	Plug 'morhetz/gruvbox'
-	Plug 'OmniSharp/omnisharp-vim'
-	Plug 'sainnhe/gruvbox-material'
+	Plug 'lifepillar/vim-solarized8'
+    Plug 'OmniSharp/omnisharp-vim'
 	Plug 'neoclide/coc.nvim', {'branch':'release'}
 	Plug 'Raimondi/delimitMate'
 	Plug 'gentoo/gentoo-syntax'
 	Plug 'neoclide/coc-python'
 	Plug 'itchyny/lightline.vim'
-	Plug 'shinchu/lightline-gruvbox.vim'
+    Plug 'taohexxx/lightline-solarized'
 	Plug 'scrooloose/nerdtree'
 	Plug 'myusuf3/numbers.vim'
     Plug 'tpope/vim-commentary'
@@ -18,7 +17,8 @@ call plug#end()
 
 "Config section
 syntax on
-colorscheme gruvbox
+colorscheme solarized8
+let g:solarized_use16=1
 set cursorline
 
 " Python commentary
@@ -28,11 +28,11 @@ autocmd FileType python setlocal commentstring=#\ %s
 " display lightline
 set laststatus=2
 set noshowmode
-"" theme
+" theme
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'lightline_solarized'
 
-""nerdtree
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeMapOpenInTab='\r'
 let NERDTreeMapOpenInTab='<ENTER>'
@@ -40,9 +40,10 @@ let NERDTreeMapOpenInTab='<ENTER>'
 let g:loaded_python_provider = 0
 
 " omnisharp settings
-let g:OmniSharp_server_use_mono = 0
+let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_popup = 1
 let g:OmniSharp_highlighting = 3
+let g:OmniSharp_server_stdio = 1
 
 " Tab size
 set tabstop=4
@@ -72,3 +73,7 @@ let g:go_bin_path = $HOME."/go/bin"
 
 " XAML
 autocmd BufNewFile,BufRead *.xaml set filetype=xml
+
+set t_Co=256
+
+map <C-f> :CocFix<CR>

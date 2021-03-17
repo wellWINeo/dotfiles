@@ -1,0 +1,7 @@
+{
+    "python.jediPath": "/home/o__ni/.local/lib/python3.8/site-packages/jedi",
+    "python.setInterpreter": "/usr/lib/python-exec/python3.8/python3",
+    "python.linting.pylintPath":"/usr/lib/python3.8/site-packages/pylint/",
+    "python.setLinter": "PyLint",
+    "html.autoClosingTags":true
+}

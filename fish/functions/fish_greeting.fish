@@ -16,9 +16,9 @@ function welcome_message -d "Say welcome to user"
     #echo -en "Welcome aboard captain "
     echo -en "Welcome to the cumzone, "
     set_color FFF  # white
-    echo -en (whoami) "."
+    echo -en (whoami) "!"
     set_color normal
-    echo -en " Only cum inside anime girls!"
+    echo -en " Only cum inside anime girls!!!"
 end
 
 
