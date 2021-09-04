@@ -1,3 +1,0 @@
-#!/bin/bash
-
-V=$(cat /sys/class/hwmon/hwmon0/temp1_input) && V=`echo "3k0 ${V/-/_} 1000/p"|dc` && echo ${V::-2}$'\xc2\xb0'

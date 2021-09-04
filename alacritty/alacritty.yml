@@ -1,0 +1,48 @@
+live_config_reload: false
+
+shell.program: /bin/fish
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+
+font:
+  normal:
+    family: SauceCodePro Nerd Font Mono 
+    style: Regular
+  size: 10.5
+
+window:
+    padding:
+        x: 5
+        y: 5
+
+# One dark colorscheme
+colors:
+    primary:
+        background: '#21252b'
+        foreground: '#dcdfe4'
+        dim_foreground: '#afb1b3'
+        bright_foreground: '#fbfafa'
+
+
+    # normal colors
+    normal:
+        black:   '#3d424b'
+        red:     '#e06c75'
+        green:   '#98c379'
+        yellow:  '#e5c07b'
+        blue:    '#61afef'
+        magenta: '#c678dd'
+        cyan:    '#56b6c2'
+        white:   '#dcdfe4'
+
+    # Bright colors
+    bright:
+        black:   '#666666'
+        red:     '#d54e53'
+        green:   '#b9ca4a'
+        yellow:  '#e7c547'
+        blue:    '#7aa6da'
+        magenta: '#c397d8'
+        cyan:    '#70c0b1'
+        white:   '#eaeaea'

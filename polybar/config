@@ -1,0 +1,190 @@
+[colors]
+background = #1e2127
+background-alt = #21252b
+
+foreground = #dcdfe4
+foreground-alt = #dcdfe4
+primary = #C678DD
+primary-alt = #98c379
+primary-alt-2 = #c678dd
+primary-alt-3 = #e5c07b
+alert = #e06c75
+
+[bar/main]
+width = 100%
+height = 30
+radius = 0
+fixed-center = true
+
+background = ${colors.background} 
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 2
+
+line-size = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "DajaVu Sans:size=12"
+font-1 = "Font Awesome 5 Free Regular:style=Regular:size=12"
+font-2 = "Font Awesome 5 Free Solid:style=Solid:size=12"
+font-3 = "Font Awesome 5 Brands Regular:style=Regular:size=12"
+
+modules-left = bspwm title
+modules-center = date
+modules-right = cpu-temp cpu memory wlan pulseaudio battery
+
+separator = "|"
+separator-padding = 1
+
+wm-restack = bspwm
+#override-redirect = true
+
+scroll-up = bspwm.next
+scroll-down = bspwm.prev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/title]
+type = internal/xwindow
+format-foreground = ${colors.foreground}
+format-padding = 4
+
+label-maxlen = 40
+label-empty = Desktop
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+poll-interval = 2
+
+ramp-capacity-foreground = ${colors.primary}
+animation-charging-foreground = ${colors.primary}
+
+format-charging = <animation-charging> <label-charging>
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+label-charging = %percentage%%
+
+label-discharging = %percentage%%
+
+label-full = Fully charged
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+bar-capacity-width = 10
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-framerate = 500
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.primary}
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = 
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <label> 
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+internal = 1
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format = <label>
+label =  %mb_used%
+
+[module/wlan]
+type = internal/network
+interface = wlan0 
+interval = 2.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected ="%signal%%"
+
+format-disconnected = 
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.primary}
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = "%a, %b %e  %H:%M"
+
+format = <label>
+label-font = 2
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume>   <label-volume>
+
+label-muted = ﱝ   MUTED
+
+ramp-volume-0 =  
+ramp-volume-1 =  
+ramp-volume-2 =  
+
+ramp-volume-foreground = ${colors.primary}
+
+[module/cpu-temp]
+type = custom/script
+exec = sensors | grep 'Tctl:' | tr -d '+' | awk '{print $2}'
+interval = 2
+format =  <label>
+format-prefix = " "  
+format-prefix-foreground = ${colors.primary}
+label = %output%
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

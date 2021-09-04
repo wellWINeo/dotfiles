@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+i3lock -i ~/Pictures/lock_note.png \
+    --nofork \
+    --force-clock \
+    --indicator \
+    --ring-color=#fb4934 \
+    --inside-color=#282828 \
+    --time-color=#ebdbb2 \
+    --date-color=#ebdbb2 \
+    --insidever-color=#98971a \
+    --ringver-color=#b8bb26 \
+    --verif-text="" \
+    --wrong-text="" \
+    --noinput-text="" \
+    --time-str="%H:%M" \
+    --ignore-empty-password \
+    --ringwrong-color=#fe8019
